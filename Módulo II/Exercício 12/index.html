@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastramento de Desenvolvedor</title>
+    <style>
+        body{
+            background-color: black; color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastramento de Desenvolvedores</h1>
+    <hr>
+    <h2>Preencha o formulário para se cadastrar!</h2>
+    <br>
+    <form id="orderForm">
+        <h3>Seus dados</h3>
+        <label for="fullname">Nome Completo:</label>
+        <br>
+        <input type="text" name="fullname" id="fullname">
+        <br><br>
+
+        <h3>Hard skills</h3>
+        <button id="button">Adicionar hard skill</button>
+        <ul id="hardSkills"></ul>
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <script src="./index.js"></script>
+</body>
+</html>
