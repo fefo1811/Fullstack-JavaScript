@@ -13,6 +13,8 @@ form.addEventListener("submit", (ev) => {
         salad += " - " + item.value + "\n"
     })
 
+    console.log(salad)
+
     alert(
 {        name,
         address,

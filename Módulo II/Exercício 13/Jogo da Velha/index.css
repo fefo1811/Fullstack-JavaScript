@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Estilização do tabuleiro */
+#gameBoard {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(3, 6rem); /* 3 colunas com 6rem de tamanho */
+    grid-template-rows: repeat(3, 6rem); /* 3 linhas com 6rem de tamanho */
+    gap: 0.5rem; /* Um pequeno espaçamento entre as colunas e linhas */
+    margin-bottom: 1.5rem;
+    max-width: 19rem;
+}
+
+/* Estilização de cada quadrado (span) */
+#gameBoard span {
+    background-color: #ddd;
+    cursor: pointer; /* Faz com que o cursor mude o estilo para indicar que é uma área clicável */
+    display: grid;
+    place-content: center; /* Uma forma de centralizar o conteúdo */
+    font-size: 5rem;
+}
+
+/* Pintará os quadrados caso o vencedor ganhe */
+#gameBoard span.win {
+    background-color: #25A340;
+}
+
+.cursor-pointer {
+    cursor: pointer
+}
