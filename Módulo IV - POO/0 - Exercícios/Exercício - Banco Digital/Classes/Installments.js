@@ -1,7 +1,7 @@
-export default class Installments {
-    constructor(installmentValue, installmentNumber, installmentSituation){
+module.exports = class Installments {
+    constructor(installmentValue, installmentNumber){
         this.installmentValue = installmentValue;
         this.installmentNumber = installmentNumber;
-        this.installmentSituation = installmentSituation;
+        this.installmentSituation = "pending";
     }
 }

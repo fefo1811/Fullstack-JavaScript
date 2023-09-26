@@ -1,6 +1,6 @@
-export default class Deposit {
-    constructor(value, createdAt){
+module.export = class Deposit {
+    constructor(value){
         this.value = value;
-        this.createdAt = createdAt;
+        this.createdAt = new Date();
     }
 }

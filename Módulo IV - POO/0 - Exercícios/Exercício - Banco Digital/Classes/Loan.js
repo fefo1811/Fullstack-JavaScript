@@ -1,17 +1,26 @@
-class Loan {
-    static #interestRate = 1654
+const Installments = require("./Installments");
 
-    constructor(loanFee, createdAt, installments){
-        this.loanFee = loanFee;
-        this.createdAt = createdAt;
-        this.installments = installments // Vai receber uma instância de Installments e será uma lista
+module.exports = class Loan {
+    static #fee = 1.05
+
+    constructor(value, installments){
+        this.value = value;
+        this.createdAt = new Date();
+        this.installments = [] // Vai receber uma instância de Installments e será uma lista
+
+        // i representa a quantidade de parcelas
+        // Será instanciado um Installment para cada número i
+        // A instanciação do Installments receberá um value será multiplicado por #fee
+        for(let i = 1; i <= installments; i++){
+            this.installments.push(new Installments((value * Loan.#fee) / installments, i))
+        }
     }
 
-    static getInterestRate(){
-        console.log(this.#interestRate)
+    static get fee(){
+        return Loan.#fee
     }
 
-    static setInterestRate(rateValue){
-        this.#interestRate = rateValue * 100
+    static set fee(feePercentage){
+        Loan.#fee = 1 + (feePercentage / 100)
     }
 }
