@@ -8,6 +8,5 @@ export default class LoginValidation{
     validateEmail(){
         const email = new EmailValidation(this.userEmail)
         email.emailValidation()
-        email.getHashtag()
     }
 } 
