@@ -6,10 +6,13 @@ document.getElementById("submit").addEventListener("click", () => {
         userPassword: document.getElementById("userPassword").value    
     }
 
-    const login = new LoginValidation(userInputs.userEmail)
+    const login = new LoginValidation(userInputs.userEmail, userInputs.userPassword)
     try{
         login.validateEmail()
+        login.validatePassword()
     } catch(e){
         console.log(e)
+    } finally {
+        console.log("Execução perfeita")
     }
 })
